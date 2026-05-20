@@ -1,0 +1,43 @@
+{
+  "businessName": "CAFE IBRAHIM",
+  "category": "Cafe",
+  "rating": 4.6,
+  "reviewCount": 591,
+  "priceRange": "₹1–200",
+  "services": [
+    "Dine-in",
+    "Drive-through",
+    "Delivery",
+    "Reserve a table",
+    "Order online"
+  ],
+  "topKeywords": [
+    "Shawarma",
+    "Irani Chai",
+    "Bun Maska",
+    "Hyderabadi Dum Biryani",
+    "Taste",
+    "Quality",
+    "Service",
+    "Breakfast",
+    "Grilled Bun Cheese Omelette"
+  ],
+  "audience": [
+    "Casual diners",
+    "Shawarma lovers",
+    "Biryani enthusiasts",
+    "Tea lovers",
+    "Breakfast seekers",
+    "Locals"
+  ],
+  "emotionalTone": "Highly positive, appreciative, and enthusiastic about food quality and service.",
+  "strengths": [
+    "High customer satisfaction and strong reputation (4.6 rating from 591 reviews).",
+    "Specialty in unique, delicious, and well-balanced Shawarma.",
+    "Authentic Irani Chai and Bun Maska are highly praised.",
+    "Good value for money with generous portions and fair pricing.",
+    "Professional, friendly, and efficient staff and service.",
+    "Offers a variety of convenient services: dine-in, drive-through, delivery, online ordering, and table reservations.",
+    "Considered an ideal place for breakfast."
+  ]
+}

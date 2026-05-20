@@ -1,0 +1,36 @@
+{
+  "primaryColors": [
+    "#F5A623",
+    "#C96749",
+    "#F5E8D7",
+    "#A0522D"
+  ],
+  "secondaryColors": [
+    "#2F5F40",
+    "#FFC107",
+    "#5A6D7D"
+  ],
+  "gradients": [
+    "linear-gradient(to right, #F5A623, #C96749)",
+    "linear-gradient(to bottom, #F5E8D7, #A0522D)",
+    "linear-gradient(to top, #FFC107, #F5A623)"
+  ],
+  "fontPairings": [
+    "Playfair Display",
+    "Lato"
+  ],
+  "spacingStyle": "Generous and hierarchical, utilizing consistent modular scales to create clear visual pathways and a sense of inviting openness.",
+  "borderRadius": "Softly rounded (4-8px typically for elements, larger for cards/sections 8-16px) to convey warmth and approachability, avoiding sharp edges.",
+  "shadowStyle": "Soft, subtle, and warm ambient shadows, mimicking natural light to add depth and dimensionality without harshness (e.g., rgba(0,0,0,0.08) with a blur of 10-20px).",
+  "uiStyle": "Clean and contemporary with warm, natural accents. Elements feature subtle textures, polished finishes, and a comfortable, inviting visual hierarchy. Emphasizes clarity and visual delight.",
+  "glassmorphismLevel": "None (focus on clarity, warmth, and natural textures over frosted effects)",
+  "animationIntensity": "Medium. Smooth, fluid transitions for content shifts and delightful micro-interactions. Quick, satisfying feedback animations for user actions (e.g., adding to cart, button clicks). Focus on appetizing and inviting reveals.",
+  "sectionMood": [
+    "Welcoming & Nostalgic",
+    "Vibrant & Appetizing",
+    "Comforting & Authentic",
+    "Efficient & Trustworthy",
+    "Delightful & Rewarding"
+  ],
+  "componentStyle": "Clean, well-defined components with subtle depth and warm background tones. Interactive elements are clearly delineated and highly tactile, suggesting quality. Food display cards emphasize large, appealing imagery with clear pricing and descriptions. Forms are simple and direct."
+}
