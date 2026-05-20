@@ -5,8 +5,10 @@ import { generateDesignSystem } from "./generators/design-system.generator";
 import { generateExperienceStrategy } from "./generators/experience-strategy.generator";
 import { generateCreativeIntelligence } from "./generators/creative-intelligence.generator";
 import { fileExists } from "./utils/file-exists";
+import { loadJson } from "./utils/load-json";
 
-const outputPath = "cafe-ibrahim/creative-intelligence.json";
+const outputPath =
+  "src/outputs/cafe-ibrahim/creative-intelligence.json";
 
 const rawBusinessData = `
 CAFE IBRAHIM
@@ -287,21 +289,76 @@ About this data
 
 async function main() {
   try {
-    if (!fileExists(outputPath)) {
-      const result = await parseGoogleMapsData(rawBusinessData);
-  
-      console.log(result);
-  
-      const creativeIntelligence = await generateCreativeIntelligence(result);
-  
-      console.log(creativeIntelligence);
-  
+    const businessPath =
+      "src/outputs/cafe-ibrahim/business-data.json";
+
+    const creativePath =
+      "src/outputs/cafe-ibrahim/creative-intelligence.json";
+
+    let businessData;
+
+    // BUSINESS INTELLIGENCE CACHE
+
+    if (fileExists(businessPath)) {
+      console.log(
+        "✅ Using cached business intelligence..."
+      );
+
+      businessData = loadJson(businessPath);
+    } else {
+      console.log(
+        "🚀 Generating business intelligence..."
+      );
+
+      businessData =
+        await parseGoogleMapsData(rawBusinessData);
+
+      saveJsonFile(
+        "cafe-ibrahim",
+        "business-data.json",
+        businessData
+      );
+    }
+
+    console.dir(businessData, {
+      depth: null
+    });
+
+    // CREATIVE INTELLIGENCE CACHE
+
+    let creativeIntelligence;
+
+    if (fileExists(creativePath)) {
+      console.log(
+        "✅ Using cached creative intelligence..."
+      );
+
+      creativeIntelligence =
+        loadJson(creativePath);
+    } else {
+      console.log(
+        "🎨 Generating creative intelligence..."
+      );
+
+      creativeIntelligence =
+        await generateCreativeIntelligence(
+          businessData
+        );
+
       saveJsonFile(
         "cafe-ibrahim",
         "creative-intelligence.json",
-        creativeIntelligence,
+        creativeIntelligence
       );
     }
+
+    console.dir(creativeIntelligence, {
+      depth: null
+    });
+
+    console.log(
+      "✅ Pipeline completed successfully."
+    );
   } catch (error) {
     console.error("Error:", error);
   }
