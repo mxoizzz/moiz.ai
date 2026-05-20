@@ -1,14 +1,9 @@
 import { parseGoogleMapsData } from "./parsers/google-maps-parser";
 import { saveJsonFile } from "./utils/save-json";
-import { generateMasterContext } from "./generators/master-context.generator";
-import { generateDesignSystem } from "./generators/design-system.generator";
-import { generateExperienceStrategy } from "./generators/experience-strategy.generator";
 import { generateCreativeIntelligence } from "./generators/creative-intelligence.generator";
 import { fileExists } from "./utils/file-exists";
 import { loadJson } from "./utils/load-json";
-
-const outputPath =
-  "src/outputs/cafe-ibrahim/creative-intelligence.json";
+import { generatePRD } from "./generators/prd.generator";
 
 const rawBusinessData = `
 CAFE IBRAHIM
@@ -289,15 +284,22 @@ About this data
 
 async function main() {
   try {
+    // PATHS
+
     const businessPath =
       "src/outputs/cafe-ibrahim/business-data.json";
 
     const creativePath =
       "src/outputs/cafe-ibrahim/creative-intelligence.json";
 
-    let businessData;
+    const prdPath =
+      "src/outputs/cafe-ibrahim/prd.json";
 
-    // BUSINESS INTELLIGENCE CACHE
+    // =========================================
+    // BUSINESS INTELLIGENCE
+    // =========================================
+
+    let businessData;
 
     if (fileExists(businessPath)) {
       console.log(
@@ -311,7 +313,9 @@ async function main() {
       );
 
       businessData =
-        await parseGoogleMapsData(rawBusinessData);
+        await parseGoogleMapsData(
+          rawBusinessData
+        );
 
       saveJsonFile(
         "cafe-ibrahim",
@@ -321,10 +325,12 @@ async function main() {
     }
 
     console.dir(businessData, {
-      depth: null
+      depth: null,
     });
 
-    // CREATIVE INTELLIGENCE CACHE
+    // =========================================
+    // CREATIVE INTELLIGENCE
+    // =========================================
 
     let creativeIntelligence;
 
@@ -353,8 +359,44 @@ async function main() {
     }
 
     console.dir(creativeIntelligence, {
-      depth: null
+      depth: null,
     });
+
+    // =========================================
+    // PRD INTELLIGENCE
+    // =========================================
+
+    let prd;
+
+    if (fileExists(prdPath)) {
+      console.log(
+        "✅ Using cached PRD..."
+      );
+
+      prd = loadJson(prdPath);
+    } else {
+      console.log(
+        "📘 Generating PRD..."
+      );
+
+      prd = await generatePRD(
+        creativeIntelligence
+      );
+
+      saveJsonFile(
+        "cafe-ibrahim",
+        "prd.json",
+        prd
+      );
+    }
+
+    console.dir(prd, {
+      depth: null,
+    });
+
+    // =========================================
+    // PIPELINE COMPLETE
+    // =========================================
 
     console.log(
       "✅ Pipeline completed successfully."
