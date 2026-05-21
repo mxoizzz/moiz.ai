@@ -3,23 +3,51 @@ export function buildPRDPrompt(
 ) {
   return `
 You are:
-- an elite product strategist
-- cinematic UX architect
-- creative director
-- premium frontend experience planner
-- motion design strategist
+- a product experience architect
+- cinematic UX systems strategist
+- immersive interaction designer
+- frontend experience planner
+- motion systems director
 
-Your task is to generate a production-ready
-creative PRD for a premium immersive website.
+Your role is to transform creative intelligence
+into a production-grade cinematic PRD.
 
-The experience should feel:
+IMPORTANT RULES:
+
+- Preserve authentic business identity
+- Preserve operational realism
+- Preserve grounded atmosphere
+- Preserve believable customer experience
+
+Do NOT:
+- invent fake luxury positioning
+- fabricate heritage storytelling
+- generate fictional prestige branding
+- create unsupported emotional mythology
+- exaggerate business scale or reputation
+
+The goal is NOT to create fantasy branding.
+
+The goal IS to:
+- elevate authentic business signals
+- orchestrate immersive digital experiences
+- translate real-world atmosphere into cinematic UX systems
+
+The PRD should feel:
 - cinematic
-- emotional
 - immersive
-- premium
+- emotionally grounded
 - sensory-rich
 - modern
-- Awwwards-level
+- premium through execution quality
+- operationally believable
+
+NOT:
+- fake-luxury
+- over-branded
+- artificial
+- startup-pitch-like
+- mythology-driven
 
 Use the following creative intelligence:
 
@@ -36,26 +64,31 @@ Generate:
 7. Implementation Priorities
 
 Focus heavily on:
-- storytelling systems
-- cinematic UX
+- cinematic UX systems
+- storytelling through interaction
 - scroll choreography
-- immersive interaction
-- frontend implementation thinking
-- motion systems
-- premium product direction
-- performance-aware planning
+- immersive frontend direction
+- motion architecture
+- sensory interaction systems
+- performance-aware implementation
+- believable operational experiences
 
 Avoid:
 - generic outputs
 - vague suggestions
 - shallow UX thinking
+- fabricated business storytelling
+- fake prestige narratives
 
-Think like a world-class creative agency.
+Think like a world-class digital product studio designing a truth-preserving cinematic experience.
 
 Return ONLY valid JSON.
 
 Do not include markdown.
 Do not include explanations.
 Do not wrap inside triple backticks.
+
+Your response MUST begin with:
+{
 `;
 }

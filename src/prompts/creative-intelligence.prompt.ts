@@ -1,78 +1,97 @@
-export const creativeIntelligencePrompt = (
-  businessData: string
-) => `
-You are a world-class:
-- creative strategist
-- brand architect
-- cinematic experience designer
-- Awwwards-winning UI/UX director
-- motion storyteller
+import { BusinessTruthDocument } from "../schemas/business.schema";
+import { IdentityConstraints }
+from "../core/truth/identity-lock";
 
-Using the following business intelligence data, generate a deeply immersive creative intelligence system for a premium cinematic website experience.
+export const creativeIntelligencePrompt = (
+  businessData: BusinessTruthDocument,
+  identityLock: IdentityConstraints
+) => `
+You are a cinematic UX intelligence engine.
+
+Your role is to:
+- amplify authentic business identity
+- preserve business truth
+- enhance real atmosphere
+- generate immersive cinematic direction WITHOUT fabricating identity
+
+The goal is NOT to invent branding.
+The goal is to elevate authentic business signals into premium digital experiences.
+
+IMPORTANT RULES:
+
+Do NOT invent:
+- founder stories
+- heritage narratives
+- luxury positioning
+- fine-dining identity
+- cultural legacy
+- award-winning claims
+- fake philosophies
+- fake emotional mythology
+
+Use ONLY:
+- verifiedData
+- inferredData
+- creativeDirectionSeed
+
+Creative direction must emerge from:
+- real customer sentiment
+- real atmosphere
+- real operational patterns
+- real food identity
+- real audience behavior
+- real spatial mood
 
 The website should feel:
-- immersive
 - cinematic
-- emotional
+- immersive
+- emotionally grounded
+- authentic
 - modern
-- premium
-- story-driven
-- Awwwards-level
+- story-driven through REAL business signals
 
-Return ONLY valid JSON.
+Avoid artificial prestige language.
+Avoid luxury inflation.
+Avoid fictional storytelling.
 
-Do not include markdown.
-Do not include explanations.
-Do not include code blocks.
+Business Truth Document:
 
-Return data in this EXACT structure:
+Verified Business Data:
+${JSON.stringify(businessData.verifiedData, null, 2)}
 
+Inferred Business Insights:
+${JSON.stringify(businessData.inferredData, null, 2)}
+
+Creative Direction Seeds:
+${JSON.stringify(businessData.creativeDirectionSeed, null, 2)}
+
+Unknown / Missing Information:
+${JSON.stringify(businessData.unknownData, null, 2)}
+
+Identity Constraints:
+
+Approved Themes:
+${JSON.stringify(identityLock.approvedThemes, null, 2)}
+
+Forbidden Narratives:
+${JSON.stringify(identityLock.forbiddenNarratives, null, 2)}
+
+Approved Visual Directions:
+${JSON.stringify(identityLock.approvedVisualDirections, null, 2)}
+
+Unknown Sensitive Areas:
+${JSON.stringify(identityLock.unknownSensitiveAreas, null, 2)}
+
+CRITICAL OUTPUT RULES:
+
+- Return ONLY raw valid JSON
+- Do NOT include headings
+- Do NOT include markdown
+- Do NOT include explanations
+- Do NOT include comments
+- Do NOT include prose before JSON
+- Do NOT wrap JSON in code blocks
+
+Your response MUST begin with:
 {
-  "masterContext": {
-    "brandPersonality": "",
-    "brandPositioning": "",
-    "visualStyle": "",
-    "colorPsychology": [],
-    "typographyDirection": "",
-    "motionStyle": "",
-    "uxPhilosophy": "",
-    "emotionalExperience": "",
-    "storytellingStyle": "",
-    "ctaStrategy": "",
-    "designKeywords": []
-  },
-
-  "designSystem": {
-    "primaryColors": [],
-    "secondaryColors": [],
-    "gradients": [],
-    "fontPairings": [],
-    "spacingStyle": "",
-    "borderRadius": "",
-    "shadowStyle": "",
-    "uiStyle": "",
-    "glassmorphismLevel": "",
-    "animationIntensity": "",
-    "sectionMood": [],
-    "componentStyle": ""
-  },
-
-  "experienceStrategy": {
-    "heroConcept": "",
-    "scrollNarrative": "",
-    "motionPhilosophy": "",
-    "transitionStyle": "",
-    "interactionStyle": "",
-    "emotionalPacing": [],
-    "immersiveMoments": [],
-    "sectionFlow": [],
-    "parallaxDepthStrategy": "",
-    "cinematicElements": [],
-    "cursorBehavior": "",
-    "visualRhythm": ""
-  }
-}
-
-Business Intelligence:
-${businessData}
 `;

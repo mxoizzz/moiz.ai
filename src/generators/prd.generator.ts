@@ -15,7 +15,21 @@ export async function generatePRD(
       contents: prompt,
     });
 
-  const text = response.text!;
+  const text = response.text || "";
 
-  return JSON.parse(text);
+const jsonStart = text.indexOf("{");
+
+const jsonEnd = text.lastIndexOf("}");
+
+if (jsonStart === -1 || jsonEnd === -1) {
+  throw new Error("No valid JSON found in PRD response");
+}
+
+const cleanedText = text
+  .slice(jsonStart, jsonEnd + 1)
+  .trim();
+
+console.log(cleanedText);
+
+return JSON.parse(cleanedText);
 }

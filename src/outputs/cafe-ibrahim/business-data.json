@@ -1,43 +1,137 @@
 {
-  "businessName": "CAFE IBRAHIM",
-  "category": "Cafe",
-  "rating": 4.6,
-  "reviewCount": 591,
-  "priceRange": "₹1–200",
-  "services": [
-    "Dine-in",
-    "Drive-through",
-    "Delivery",
-    "Reserve a table",
-    "Order online"
-  ],
-  "topKeywords": [
-    "Shawarma",
-    "Irani Chai",
-    "Bun Maska",
-    "Hyderabadi Dum Biryani",
-    "Taste",
-    "Quality",
-    "Service",
-    "Breakfast",
-    "Grilled Bun Cheese Omelette"
-  ],
-  "audience": [
-    "Casual diners",
-    "Shawarma lovers",
-    "Biryani enthusiasts",
-    "Tea lovers",
-    "Breakfast seekers",
-    "Locals"
-  ],
-  "emotionalTone": "Highly positive, appreciative, and enthusiastic about food quality and service.",
-  "strengths": [
-    "High customer satisfaction and strong reputation (4.6 rating from 591 reviews).",
-    "Specialty in unique, delicious, and well-balanced Shawarma.",
-    "Authentic Irani Chai and Bun Maska are highly praised.",
-    "Good value for money with generous portions and fair pricing.",
-    "Professional, friendly, and efficient staff and service.",
-    "Offers a variety of convenient services: dine-in, drive-through, delivery, online ordering, and table reservations.",
-    "Considered an ideal place for breakfast."
-  ]
+  "verifiedData": {
+    "businessName": "CAFE IBRAHIM",
+    "category": "Cafe",
+    "address": "Surve No 230/B, Lane No 5, Shop No 4, Sanjay Park, Airport Road, Plot No 22, Sanjay Park Main Rd, opposite Jeevan Super Market, Pune, Maharashtra 411032",
+    "phone": "085510 61614",
+    "website": "",
+    "rating": 4.6,
+    "reviewCount": 591,
+    "priceRange": "₹1–200",
+    "operatingHours": [
+      "Closes 3 am"
+    ],
+    "services": [
+      "Dine-in",
+      "Drive-through",
+      "Delivery",
+      "Reserve a table",
+      "Order online"
+    ],
+    "topKeywords": [
+      "shawarma",
+      "irani chai",
+      "bun maska",
+      "peri peri shawarma"
+    ],
+    "googleVerifiedFacts": [
+      "Dine-in",
+      "Drive-through",
+      "Delivery"
+    ]
+  },
+  "inferredData": {
+    "audience": [
+      "Late-night diners and night owls",
+      "Students and young professionals on a budget",
+      "Local street food enthusiasts",
+      "Casual breakfast seekers"
+    ],
+    "emotionalTone": [
+      "Welcoming and hospitable",
+      "Satisfied and appreciative",
+      "Energetic and casual"
+    ],
+    "atmosphere": [
+      "Bustling and lively",
+      "Casual local hangout",
+      "Late-night food hub"
+    ],
+    "strengths": [
+      "Highly rated, uniquely seasoned shawarmas",
+      "Quick and friendly customer service",
+      "Excellent value for money and generous portions",
+      "Late-night availability (open until 3 AM)"
+    ],
+    "visualStyle": [
+      "No-nonsense quick-service joint",
+      "Street-side cafe charm",
+      "Warm and functional dining setup"
+    ],
+    "brandSignals": [
+      "Strong community favorite for affordable snacks",
+      "Go-to local spot for authentic Irani Chai and Shawarmas",
+      "High-volume, fast-turnaround service reputation"
+    ],
+    "inferenceConfidence": [
+      {
+        "field": "audience",
+        "confidence": 0.9,
+        "evidence": [
+          "Operating hours state a 3 AM closing time, pointing to late-night diners.",
+          "The low price bracket (₹1-200) and snack-oriented keywords strongly appeal to students and young adults."
+        ]
+      },
+      {
+        "field": "strengths",
+        "confidence": 0.95,
+        "evidence": [
+          "223 keyword mentions for 'shawarma' paired with phrases like 'unique flavour', 'chicken juicy', and 'generous' portions.",
+          "Multiple reviews highlight 'friendly service' and 'helpful staff'."
+        ]
+      },
+      {
+        "field": "atmosphere",
+        "confidence": 0.85,
+        "evidence": [
+          "Popular times show steady evening/night activity, and reviews describe it as an 'ideal place for breakfast' and late-night cravings."
+        ]
+      }
+    ]
+  },
+  "unknownData": {
+    "missingInformation": [
+      "Official website URL",
+      "Complete day-by-day weekly operating hours matrix",
+      "Year of establishment",
+      "Names of founders or key management team",
+      "Exact indoor/outdoor seating capacity",
+      "Accepted payment methods (digital wallets, cards, cash)"
+    ],
+    "blockedAssumptions": [
+      "Do not assume this is a fine-dining or formal restaurant format.",
+      "Do not assume they serve a full course dinner menu (offerings focus primarily on snacks, chai, biryani, and shawarma).",
+      "Do not assume the brand has multiple locations based on this single data entry.",
+      "Do not assume wheelchair accessibility features as none are verified."
+    ]
+  },
+  "creativeDirectionSeed": {
+    "cinematicTone": [
+      "Vibrant street-side energy",
+      "Steaming warm hospitality",
+      "Chilled late-night hangout vibes"
+    ],
+    "spatialMood": [
+      "Cozy, high-energy neighborhood corner lit up against the night sky"
+    ],
+    "motionStyle": [
+      "Slick, fast-paced transitions",
+      "Slow-motion close-ups of food preparation (slicing juicy shawarma meat, pouring steaming hot tea)",
+      "Dynamic camera sweeps capturing the lively evening crowd"
+    ],
+    "uiAtmosphere": [
+      "Warm charcoal backdrops with accents of rich amber, tea-brown, and bright neon orange to mimic late-night streetlights"
+    ],
+    "photographyDirection": [
+      "High-contrast night food photography",
+      "Macro shots of textured ingredients (creamy sauces, toasted bun maska, seasoned chicken)",
+      "Candid imagery of staff interacting with customers with genuine smiles"
+    ],
+    "lightingDirection": [
+      "Warm overhead incandescent lighting mixed with soft, cool ambient street lighting to create depth and authentic night-time character"
+    ],
+    "confidenceNotes": [
+      "The visual direction is strongly anchored by the cafe's late-night operating hours and high-volume specialty snacks (shawarma and chai) which natively suggest a high-contrast, energetic, and warm aesthetic."
+    ]
+  }
 }

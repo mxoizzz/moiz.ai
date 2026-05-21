@@ -1,4 +1,4 @@
-import { parseGoogleMapsData } from "./parsers/google-maps-parser";
+import { extractBusinessTruth } from "./parsers/google-maps-parser";
 import { saveJsonFile } from "./utils/save-json";
 import { generateCreativeIntelligence } from "./generators/creative-intelligence.generator";
 import { fileExists } from "./utils/file-exists";
@@ -306,7 +306,7 @@ async function main() {
     } else {
       console.log("🚀 Generating business intelligence...");
 
-      businessData = await parseGoogleMapsData(rawBusinessData);
+      businessData = await extractBusinessTruth(rawBusinessData);
 
       saveJsonFile("cafe-ibrahim", "business-data.json", businessData);
     }

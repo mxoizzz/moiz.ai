@@ -1,187 +1,216 @@
 {
   "productVision": {
-    "title": "CAFE IBRAHIM: A Culinary Odyssey – Website Redefined",
-    "statement": "To architect a digital flagship that transcends traditional web experiences, embodying CAFE IBRAHIM's essence as a revered artisan and warm storyteller. This platform will be a cinematic, emotionally resonant journey, elevating the authentic heritage of Indian and Middle Eastern flavors into a modern, sensory-rich narrative, culminating in a premium, 'Awwwards-level' digital destination that inspires delight, appreciation, and a desire to partake in our culinary legacy.",
-    "coreProposition": "Transforming passive browsing into an active, emotional, and immersive culinary discovery."
+    "title": "Lane No. 5: The Digital Pulse of Pune's Late-Night Sanctuary",
+    "statement": "To translate the raw, energetic pulse and authentic street-side comfort of Lane No. 5 – Pune's definitive late-night urban sanctuary – into a cinematic, immersive, and operationally transparent digital experience. Our vision is to extend the sensory richness of sizzling shawarma, steaming chai, and vibrant street life, establishing the online presence as a direct, honest, and high-fidelity reflection of the physical establishment, serving post-midnight cravings and morning rituals with unpretentious excellence."
   },
   "experienceGoals": [
     {
-      "id": "EG01",
-      "name": "Evoke Profound Emotion",
-      "description": "Trigger an emotional journey from initial curiosity and intrigue, through warmth and comfort, to delight, satisfaction, and a deep appreciation for CAFE IBRAHIM's culinary artistry and heritage, as outlined in 'emotionalExperience'.",
-      "metric": "Post-interaction sentiment analysis, qualitative user feedback on emotional resonance, time spent on emotional 'immersiveMoments'."
+      "id": "authenticity_immersive_atmosphere",
+      "goal": "Cultivate an authentic, immersive digital atmosphere that mirrors the physical experience of Lane No. 5, emphasizing the high-contrast lighting, steam, and sizzle.",
+      "metrics": [
+        "User engagement duration on hero video",
+        "Qualitative feedback on 'cinematic feel'",
+        "Bounce rate reduction from landing page"
+      ]
     },
     {
-      "id": "EG02",
-      "name": "Establish Brand Prestige & Authenticity",
-      "description": "Convey CAFE IBRAHIM's brand personality ('revered artisan, warm storyteller, sophisticated curator') and positioning ('elevating authentic heritage') through every visual, auditory, and interactive touchpoint, cementing an 'Awwwards-level' premium perception.",
-      "metric": "Brand perception surveys, competitive benchmarking against Awwwards sites, media mentions and design community recognition."
+      "id": "operational_transparency_trust",
+      "goal": "Establish immediate operational transparency and build trust through real-time, verifiable information on service hours, location, and popular offerings.",
+      "metrics": [
+        "Click-through rate on 'LIVE: SERVING UNTIL 3:00 AM' badge",
+        "Conversion rate for map/direction requests",
+        "Accuracy of listed operating hours vs. actual operations"
+      ]
     },
     {
-      "id": "EG03",
-      "name": "Facilitate Sensory-Rich Exploration",
-      "description": "Design a UX philosophy ('sensory-rich journey of discovery') where intuitive, immersive interactions seamlessly unveil narratives, evoke a sense of taste, aroma, and texture, and provide an effortless culinary exploration.",
-      "metric": "Average session duration, depth of scroll (percentage of site viewed), engagement rates with interactive 'immersiveMoments', qualitative feedback on sensory engagement."
+      "id": "sensory_craving_ignition",
+      "goal": "Ignite sensory cravings and immediate hunger through visually rich, macro-focused content and evocative micro-interactions that highlight product quality and preparation.",
+      "metrics": [
+        "Engagement with food photography and video sections",
+        "Conversion rate from menu view to ordering channels",
+        "Time spent on 'The Core Rotation' section"
+      ]
     },
     {
-      "id": "EG04",
-      "name": "Drive Contextual Engagement & Conversion",
-      "description": "Implement a 'subtle, inviting, and contextually integrated CTA strategy' that guides users deeper into the experience and towards services (discover, taste, reserve, order) without breaking immersion, leading to desired actions.",
-      "metric": "Click-through rates on contextual CTAs, reservation inquiries, online order conversions, newsletter sign-ups, 'Discover Our Craft' interactions."
+      "id": "effortless_access_action",
+      "goal": "Provide effortless and direct access to ordering, location, and operational details, reflecting the 'fast-paced, high-turnaround urban energy' of the business.",
+      "metrics": [
+        "Completion rate of ordering flow",
+        "Efficiency of 'fastTurnaroundNavigation'",
+        "Mobile usability scores for quick access functions"
+      ]
     }
   ],
   "uxArchitecture": {
-    "overallStructure": "A chapter-based, single-page experience, where each scroll choreographs the unveiling of a new narrative segment. The site operates as a continuous 'cinematic reel', allowing for deep, uninterrupted immersion, with a subtle, always-present navigation for quick jumps.",
-    "navigationStrategy": {
-      "primary": "Contextual, semi-transparent 'chapter markers' or a 'filmstrip' progress indicator dynamically updated on scroll, providing a sense of linear progression. A minimalist, fixed, 'glassmorphic' hamburger menu for full site map access, appearing only on hover or explicit interaction, integrating seamlessly into the visual canvas.",
-      "secondary": "Embedded micro-CTAs ('Discover Our Craft', 'Taste the Legacy', 'Reserve Your Journey') strategically placed within narratives, designed as integral visual elements to guide deeper dives or service engagement without breaking flow."
+    "homepageHero": {
+      "purpose": "To immediately immerse the user in the core atmosphere and communicate real-time operational status, setting a cinematic tone.",
+      "visualMedia": {
+        "type": "Autoplay, muted cinematic video loop",
+        "content": "Seamless sequence: carving knife slicing juicy chicken from the spinning shawarma spit (focus on texture, juice, motion) seamlessly transitioning into a high-angle pour of steaming Irani chai (focus on steam, liquid texture, clay cup).",
+        "cinematicEffect": "High-contrast, low-light setting making the food action pop, accompanied by subtle ambient sound (optional, user-initiated) of sizzle and steam."
+      },
+      "dynamicHeroBadge": {
+        "text": "LIVE: SERVING UNTIL 3:00 AM",
+        "style": "Pulsing neon-orange indicator, subtle glow animation, dynamically updated via real-time data to reflect open/closed status.",
+        "interaction": "Clicking reveals detailed operating hours and daily specials calendar."
+      },
+      "primaryCallToAction": {
+        "text": "Dine-in / Drive-through / Delivery",
+        "action": "Triggers a geo-aware modal with options for 'Directions (Dine-in/Drive-through)', 'Order for Pickup', or 'Order for Delivery' via integrated platforms (e.g., Swiggy/Zomato links for delivery, internal system for pickup). Contextually suggests fastest option based on user location.",
+        "style": "SANS-SERIF-BOLD-CONDENSED, high-impact button with a subtle, responsive press effect."
+      }
     },
-    "sectionFlow": [
+    "scrollChoreography": [
       {
-        "id": "S01",
-        "name": "Overture: The Cinematic Canvas",
-        "concept": "Full-bleed, responsive hero segment featuring a slow-motion, shallow-depth-of-field cinematic video (e.g., steam delicately rising from Irani Chai or intricate Peri Peri Shawarma layering), accompanied by bespoke ambient sound. Dynamic, 'Playfair Display' typography reveals 'CAFE IBRAHIM' and a captivating tagline, setting the 'Anticipation' (emotionalPacing).",
-        "keyInteractions": "Initial scroll initiates the narrative journey, subtle scroll-down prompt appears and fades, custom cursor transforms upon hover."
+        "sectionId": "hero_to_core_rotation",
+        "description": "Upon initial scroll past the hero, the vibrant, energetic 'Core Rotation' section slides into view with a fast, almost 'cut' like transition, mimicking the abrupt, high-energy pace of street-side service. Elements within the cards animate into focus with a quick, decisive bounce."
       },
       {
-        "id": "S02",
-        "name": "The Legacy Unfolds: Heart of Heritage",
-        "concept": "A narrative-driven section detailing the brand story, cultural significance, and heritage. Content unfolds through sophisticated cinematic wipes and 'focus pull' animations, showcasing 'evocative realism' and 'rich textures' in imagery. Evokes 'Warmth & Intrigue' (emotionalPacing).",
-        "keyInteractions": "Scroll-triggered content reveals with subtle parallax, interactive timeline elements detailing brand milestones."
+        "sectionId": "core_rotation_horizontal_scroll",
+        "description": "Horizontal scroll of food cards features a parallax effect on background elements, creating depth. As each card centers, its associated micro-detail (e.g., steam from chai, sizzle particles from shawarma) subtly animates and gains focus, drawing attention to sensory attributes."
       },
       {
-        "id": "S03",
-        "name": "Signature Creations: A Feast for the Senses",
-        "concept": "Curated spotlight on 3-4 hero dishes. Each dish features a dedicated micro-narrative, a full-screen, slow-motion video vignette of its preparation (e.g., biryani layering), an 'aroma cloud' visualizer (subtly shifting colors based on spice profiles), and dynamic typography revealing flavor notes synced with visual cues. Aims for 'Delight & Desire' (emotionalPacing).",
-        "keyInteractions": "Interactive ingredient spotlight (hover reveals details), subtle soundscapes per dish (activated on view), expandable details for dish narratives."
-      },
-      {
-        "id": "S04",
-        "name": "The Grand Menu: Crafted for Discovery",
-        "concept": "An elegantly presented, scrollable menu section. Menu items reveal with subtle, fluid animations upon entering the viewport, showcasing 'artisanal close-ups' of dishes. Filtering options are integrated seamlessly, with 'glassmorphic' overlays providing detailed information on selection. Cultivates 'Appreciation & Craft' (emotionalPacing).",
-        "keyInteractions": "Hover states evoke texture or warmth on menu items, filtered menu interactions, quick view modals for comprehensive dish information."
-      },
-      {
-        "id": "S05",
-        "name": "Art of the Craft: Behind the Scenes",
-        "concept": "An immersive segment into the culinary process. Features high-fidelity video montages of cooking techniques, textural imagery of spices and fresh ingredients. Includes artisan profiles and 'storytellingStyle' micro-narratives on preparation philosophies. Reinforces 'Appreciation & Craft' (emotionalPacing).",
-        "keyInteractions": "Interactive hotspots on ingredient displays reveal origin stories, integrated video playback controls, testimonials from chefs/artisans."
-      },
-      {
-        "id": "S06",
-        "name": "Gather & Savor: The Cafe Experience",
-        "concept": "Captures the cafe's ambiance and community spirit. Incorporates a '360-degree virtual tour segment' with ambient cafe sounds and interactive hotspots. Features imagery of joyful patrons, modern interiors, and community events. Fosters 'Contentment & Belonging' (emotionalPacing).",
-        "keyInteractions": "Interactive 360 tour navigation, social media feeds integrated visually, fluid carousels for customer testimonials."
-      },
-      {
-        "id": "S07",
-        "name": "Curtain Call: Your Journey Begins",
-        "concept": "A clear, accessible section for contact information, reservation system integration, and online ordering. Presented elegantly with a concluding, warm aesthetic that echoes the brand's 'Sophisticated Curator' persona. Leads to 'Satisfaction & Action' (emotionalPacing).",
-        "keyInteractions": "Integrated booking widget, interactive map, direct links to social media, subtle form interactions for inquiries."
+        "sectionId": "core_rotation_to_operational_pulse",
+        "description": "Transition from 'The Core Rotation' to 'Lane No. 5 Energy' uses a vertical wipe, revealing the grid of 'real scenes' as if pulling back a curtain to show the behind-the-scenes pulse of the establishment. Grid items load with a staggered fade-in, emphasizing the 'real-time' aspect."
       }
     ],
-    "immersiveInteractionPrinciples": {
-      "scrollNarrative": "Each scroll is a deliberate, unhurried progression, guided by a 'poetic, unhurried rhythm', revealing content in seamless, cinematic chapters. The pace subtly shifts based on content density and emotional emphasis.",
-      "cursorBehavior": "A refined, subtle cursor that transforms contextually – a warm, glowing 'aura' on hover for interactive elements, a delicate, custom pointer on links. It leaves a faint, ephemeral trail (e.g., a subtle particle effect or ghosting) on movement, hinting at interaction and responsiveness.",
-      "feedbackMechanism": "Tactile and responsive, offering subtle visual (e.g., scale-up, color shift, depth change) and bespoke auditory feedback on hover and click, reinforcing a premium and satisfying user experience.",
-      "uiStyle": "Minimalist, high-fidelity UI elements that are context-aware, appearing only when needed and integrating seamlessly into the visual narrative. Utilizes 'subtle translucency (10-20% opacity) with a light blur' ('glassmorphismLevel') for modal overlays, contextual menus, and floating navigation, adding modern, ethereal depth."
+    "interactiveSections": [
+      {
+        "id": "street_side_fuel",
+        "title": "The Core Rotation",
+        "subtitle": "No massive menu books. Just high-velocity, high-satisfaction street-side staples done right.",
+        "uiMechanism": "Horizontally scrollable high-contrast cards. Each card prominently features a hero image (macro photography) and crisp typography for the item name and a succinct description (e.g., 'Shawarma: Juicy chicken roasted slow, seasoned sharp, and wrapped tight.'). Hovering over a 'Shawarma' card triggers a subtle, ambient sizzling sound effect and a light glow. For 'Irani Chai,' a subtle CSS-driven steam effect rises from the cup.",
+        "contentStrategyRef": [
+          "Menu description for Shawarma",
+          "Irani Chai & Bun Maska showcase"
+        ]
+      },
+      {
+        "id": "operational_pulse",
+        "title": "Lane No. 5 Energy",
+        "subtitle": "Real scenes from the corner shop.",
+        "uiMechanism": "Dynamic, responsive grid layout. Cells display: 1) Curated, real-time social media snippets (customer sentiment highlights with user-generated photos/videos, vetted for authenticity). 2) Live data visualization of popular late-night hours (e.g., heat map or graph showing peak traffic). 3) An embedded, interactive map centered on the Airport Road / Sanjay Park intersection, with a pulsing location marker. Clicking the map initiates quick-route directions.",
+        "contentStrategyRef": [
+          "Late-night operating hours claim"
+        ]
+      }
+    ],
+    "footer": {
+      "layout": "Utilitarian dashboard format. Displays essential, verified facts with MONOSPACE-STREET-CLEAN typography: 'Operating Hours: CLOSES 3:00 AM', 'Phone: 085510 61614', 'Address: [Full Address]', and a 'Quick-Route Drive-Through' button linking directly to navigation apps. All data points are interactable for quick calls or map launches. No unnecessary branding or fluff, purely functional."
     }
   },
   "motionSystem": {
-    "corePhilosophy": "Purposeful elegance and deliberate grace. Motion is a fundamental storytelling device, enhancing sensory and emotional connection, guiding the user's focus, and revealing content with a 'cinematic unfolding' and 'unhurried rhythm'. Every animation is designed to serve the narrative.",
-    "scrollChoreography": {
-      "overall": "A continuous 'parallax depth strategy' employing subtle, multi-layered shifts. Background elements move slower, foregrounds faster, mimicking cinematic tracking shots and focus pulls. Scroll speed is dynamically modulated to match emotional pacing and content density, ensuring a 'deliberate, flowing cadence'.",
-      "sectionTransitions": "Seamless, organic dissolves and sophisticated cinematic wipes (e.g., horizontal pans, vertical tilts, radial reveals) that mimic natural camera movements. These are carefully timed and eased, creating a fluid, uninterrupted narrative flow between sections, avoiding abrupt cuts.",
-      "elementReveals": "Content (text, images, UI elements) appear with gentle, staggered fades, subtle scale-ups, and position shifts, synchronized with scroll progress. Text blocks are revealed elegantly, often character-by-character or line-by-line using refined 'typewriter' effects for dramatic impact.",
-      "focusPulls": "As users scroll to new narrative focal points or 'immersiveMoments', 'focus pull and rack focus animations' will subtly shift the depth of field on imagery and video, drawing the eye to critical details and enhancing cinematic realism."
+    "globalPrinciples": {
+      "speed": "Generally fast and decisive, mirroring high-volume operations, with strategic moments of slow-motion for sensory focus.",
+      "easing": "Sharp `ease-out` for general UI, `ease-in-out` for smoother cinematic transitions, subtle `spring` effects for tactile feedback.",
+      "framerate": "Optimized for 60fps across devices to ensure fluid, premium execution."
     },
-    "interactionMotion": {
-      "hoverStates": "Subtle, sensory feedback: interactive elements (buttons, images) gain a soft, inner glow, a very slight elastic scale-up, or a dynamic lighting shift. Images might reveal a deeper saturation or a subtle 'breathing' depth effect, evoking texture and warmth.",
-      "clickFeedback": "Deliberate and satisfying micro-interactions – a concise ripple effect, a gentle press-and-release, often accompanied by a bespoke, subtle auditory cue for premium feedback.",
-      "modalTransitions": "Smooth, 'glassmorphic' fades, subtle scale-ins, and depth shifts for modals and overlays, maintaining visual hierarchy and soft depth without jarring the user."
+    "heroEntrance": {
+      "description": "The entire hero section enters the viewport with a swift, subtle upward push and a soft fade-in, as if being revealed. The video loop starts playing immediately.",
+      "duration": "400ms",
+      "easing": "ease-out-quad"
     },
-    "dynamicElements": {
-      "videoVignettes": "Full-screen, slow-motion video segments with specific atmospheric color grading, playing on auto-loop with subtle ambient soundscapes. These are critical anchors for 'immersiveMoments'.",
-      "aromaCloudVisualizer": "A subtle, procedural particle or shader-based animation that subtly shifts colors based on a showcased spice profile, suggesting the diffusion of aroma and enhancing sensory immersion.",
-      "typographyAnimation": "Dynamic revealing and emphasis of flavor notes, key headlines, and CTAs, perfectly synced with visual cues and the 'poetic rhythm' of the narrative. Utilizes elegant letter-spacing and weight shifts for impact.",
-      "cursorEffects": "The custom cursor leaves a faint, ephemeral trail (e.g., a warm, glowing particle or a very subtle ghosting effect) reinforcing interaction, guiding the eye, and adding to the overall sensory experience."
+    "sectionTransitions": {
+      "description": "Vertical scrolling triggers `slick, split-second cuts` between major sections, resembling rapid camera changes in a film, ensuring the pace remains energetic. These transitions may involve subtle, full-width content wipes or swift fades.",
+      "duration": "250ms - 350ms",
+      "easing": "ease-in-out-cubic"
     },
-    "animationIntensity": "Smooth, purposeful, and medium-low intensity. Animations are designed to enhance narrative flow, provide elegant feedback, and reveal details, never to distract or feel abrupt. Performance is paramount, targeting 60fps+ on modern devices, even for complex sequences."
+    "microInteractionsMotion": [
+      {
+        "interaction": "Steam Effect (Chai menu panel hover)",
+        "description": "A subtle, CSS-driven ambient steam mist rises and dissipates slowly behind the Chai menu panel on hover. The mist is semi-transparent, using `linear-gradient` and `animation` properties to simulate natural, curling steam. Originates from the base of the image.",
+        "properties": "Opacity, vertical translation, slight radial blur, color #FFFFFF (with low opacity)."
+      },
+      {
+        "interaction": "Neon Glow Toggle ('Late-Night Mode')",
+        "description": "Activating the 'Late-Night Mode' switch triggers a smooth, full-screen color overlay transition from the primary background (`#0F0F10`) to a deeper, more saturated dark tone with an ambient glow of `#FF5E00` emanating from the edges of content blocks. UI elements such as text and active indicators subtly shift their intensity and hue to complement the 'street neon' atmosphere. The toggle itself might emit a temporary 'ping' animation with a neon ripple.",
+        "duration": "600ms",
+        "easing": "ease-in-out-sine"
+      },
+      {
+        "interaction": "Fast Turnaround Navigation (Menu Item Clicks)",
+        "description": "Clicking a menu item or a navigation link results in an `instant-load` experience where the new content snaps into place with minimal transition time. Any intermediate loaders are quick, full-screen blurs that disappear within 100ms. This mimics the rapid service and operational efficiency of the physical cafe, emphasizing 'no waiting time'.",
+        "duration": "50-150ms (for perceived transition)",
+        "easing": "linear (for instant feel)"
+      },
+      {
+        "interaction": "Shawarma Sizzle & Glow",
+        "description": "Hovering over a Shawarma card: a subtle `box-shadow` with `#FF9F0A` and a light `text-shadow` on the title creates a soft incandescent glow. Simultaneously, a very faint, almost subliminal crackling/sizzling sound effect plays (brief, less than 1 second, with controlled volume), enhancing the sensory experience.",
+        "properties": "CSS `box-shadow`, `filter: blur()`, audio trigger."
+      }
+    ]
   },
   "visualSystem": {
-    "overallAesthetic": "Evocative realism, rich textures, golden-hour lighting, and deep focus compositions define a premium, cinematic look. An elegant, slightly desaturated color palette with vibrant accents creates a modern yet timeless feel, embodying 'Artisanal' and 'Gourmet'.",
     "colorPalette": {
-      "primary": {
-        "Deep Crimson": "#9A2A2A",
-        "Saffron Gold": "#B8860B",
-        "Earthy Umber": "#6B4226"
+      "primaryBackground": {
+        "hex": "#0F0F10",
+        "description": "Deep charcoal, mimicking the Pune night sky over Lane 5. Provides a high-contrast canvas for vibrant accents to pop, creating depth and a late-night atmosphere."
       },
-      "secondary": {
-        "Smoked Charcoal": "#2C3E50",
-        "Creamy Off-White": "#F5F5DC",
-        "Muted Slate": "#778899"
+      "accentAmber": {
+        "hex": "#FF9F0A",
+        "description": "Warm incandescent overhead lighting and fresh glowing embers. Used for key interactive elements, subtle highlights, and focal points in food photography, evoking warmth and freshness."
       },
-      "accents": "Subtle pops of deep teal (#006D6D) or burnt orange (#D87C31) will be used sparingly for interactive elements or rare highlights, derived from and complementing the brand's culinary imagery, adhering to 'elegant with vibrant accents'."
+      "teaBrown": {
+        "hex": "#7C5233",
+        "description": "Rich, earthy, and aromatic tone of boiling Irani Chai. Utilized for secondary text, subtle background textures, and illustrative elements related to warmth and comfort."
+      },
+      "streetNeonOrange": {
+        "hex": "#FF5E00",
+        "description": "High-intensity neon warmth reminiscent of the late-night storefront glow. Reserved for critical calls-to-action, 'LIVE' indicators, and dynamic UI elements requiring immediate attention."
+      }
     },
-    "typographySystem": {
-      "headlines": "'Playfair Display' (or 'Cormorant Garamond' as alternative) – Elegant, slightly condensed serifs for impactful, heritage-rich titles. Utilized with generous letter-spacing and varied weights for a premium, editorial feel.",
-      "bodyText": "'Outfit' (or 'Inter' as alternative) – Refined, highly legible sans-serifs for body copy, conveying modern clarity and comfort. Optimized for various screen sizes and reading lengths.",
-      "ctaText": "A slightly bolder weight of the primary sans-serif, or a subtle italic variation of the serif for special emphasis, ensuring readability and elegance within subtle CTAs."
+    "typography": {
+      "displayFont": {
+        "family": "SANS-SERIF-BOLD-CONDENSED (e.g., 'Archivo Black', 'Oswald Bold')",
+        "usage": "Impactful, high-volume headers ('The Core Rotation', main titles), mimicking fast-paced, high-turnaround urban energy. Used for maximum legibility and assertive communication."
+      },
+      "bodyFont": {
+        "family": "MONOSPACE-STREET-CLEAN (e.g., 'Space Mono', 'Roboto Mono')",
+        "usage": "Industrial, utilitarian layouts for menu descriptions, footer details, and operational information. Mimics quick receipts, clean execution, and no-nonsense menu structures. Ensures clarity and a modern, functional aesthetic."
+      }
     },
-    "spacingAndLayout": "Generous and breathable, employing a 'soft grid' that emphasizes negative space and allows elements ample room. Asymmetric compositions, inspired by cinematic framing, will create visual interest, dynamism, and direct the eye.",
-    "depthAndDetail": {
-      "borderRadius": "Subtle and organic, primarily 8-12px for softer edges on cards and buttons. Occasional larger, flowing curves for sectional dividers or 'glassmorphic' overlays, creating a fluid and modern feel.",
-      "shadowStyle": "Soft, diffused multi-layered shadows creating subtle depth and separation, akin to ambient lighting. Complemented by occasional inner glows on focal elements to suggest warmth or digital luminescence, enhancing the 'sensory' experience.",
-      "glassmorphism": "Subtle translucency (10-20% opacity) with a light blur, used sparingly and contextually for modal overlays, contextual menus, and floating navigation. This adds a modern, ethereal depth without distracting from the primary narrative."
-    },
-    "uiComponentStyle": "Elegantly crafted, bespoke components with refined details. Buttons have subtle tactile feedback. Cards often integrate subtle textures (e.g., brushed metal, canvas overlay) or atmospheric overlays to feel inherently part of the cinematic scene. Icons are custom-designed, minimalist line art with a nod to cultural motifs.",
-    "imageryAndVideo": "High-resolution, masterfully art-directed photography and videography. 'Selective depth of field', 'chiaroscuro lighting', and 'wide aspect ratio' are fundamental to all key visuals, ensuring a consistent 'cinematic' and 'evocative' quality. Strict adherence to the 'elegant, slightly desaturated color palette with vibrant accents' for all media."
+    "lightingAndAtmosphere": {
+      "environment": "High-contrast night-time depth is paramount. Dark backdrops (`#0F0F10`) are leveraged to make steam from boiling chai and glowing shawarma spit-fires visually pop with dramatic intensity. Digital lighting will emulate incandescent warmth and neon glows, creating focal points against ambient darkness.",
+      "photographyDirection": "Emphasis on `macro shots` and candid, raw kitchen movement. Rich, dripping garlic sauce, seasoned chicken spinning on the rotisserie (showing texture, marinade), crisp toasted bun maska crusts (detail of butter melting), and natural steam curling off freshly poured clay cups of chai. Images should feel un-staged, captured in the moment, highlighting texture, temperature, and action over static perfection. Bokeh effects to emphasize foreground food elements.",
+      "cinematicTransitions": "Beyond UI transitions, this refers to visual storytelling. Photography and video will be edited to incorporate `slick, split-second cuts` from high-energy street motion (e.g., blur of passing vehicles, crowd bustle) to `slow-motion macro-frames` of food preparation (e.g., a drop of oil hitting a hot surface, spices being sprinkled). This juxtaposition builds anticipation and highlights the craft."
+    }
   },
   "technicalDirection": {
-    "frontendFramework": "React with Next.js for robust component architecture, server-side rendering (SSR) or static site generation (SSG) for performance, and an optimized development experience tailored for complex animations and data fetching.",
-    "animationEngine": "GSAP (GreenSock Animation Platform) with its ScrollTrigger plugin is mandatory for all complex, timeline-based, and scroll-triggered animations. This is critical for achieving 'Awwwards-level' fluid, precise, and performant motion choreography and 'cinematic UX'.",
-    "3DGraphics": "Three.js/WebGL will be utilized for specific 'immersive moments' such as the 'aroma cloud' visualizer and potential dynamic background textures, if necessary, to achieve desired sensory depth beyond CSS/SVG capabilities. Prioritize performance and ensure graceful degradation or fallback for non-compatible devices.",
-    "performanceOptimization": {
-      "imageAndVideo": "Implement next-gen image formats (WebP, AVIF), responsive images (srcset, sizes), native lazy loading, and adaptive video streaming (HLS/DASH) for hero and background videos. Integrate with a robust CDN (e.g., Cloudflare, Fastly) for all media assets.",
-      "codeOptimization": "Aggressive code splitting, tree-shaking, critical CSS generation, dynamic imports for components, and efficient client-side caching strategies. Minimize third-party script bloat.",
-      "animationEfficiency": "Leverage hardware acceleration via CSS transforms/opacity where possible, use requestAnimationFrame for custom JavaScript animations, and meticulously avoid layout-triggering properties.",
-      "fontLoading": "Optimize font loading with `font-display: swap` and preloading of critical fonts to minimize FOIT (Flash of Invisible Text) and FOUT (Flash of Unstyled Text)."
-    },
-    "responsiveDesign": "Adaptive design strategy with a mobile-first approach is paramount. Ensure the cinematic fidelity and immersive experience scales gracefully across all device types and screen orientations. Prioritize core narrative flow and critical performance on mobile, potentially simplifying some heavy animations for smaller viewports while retaining the emotional core.",
-    "soundDesignIntegration": "Lightweight, bespoke ambient soundscapes for sections (e.g., subtle cafe chatter, sizzling food sounds), subtle UI interaction sounds, and atmospheric audio for video vignettes. Managed through Howler.js or similar library for precise control, lazy loading, and cross-browser compatibility. A user-controlled mute/unmute option will be prominently available.",
-    "accessibilityConsiderations": "Strict adherence to WCAG 2.1 AA standards. Implement semantic HTML, comprehensive keyboard navigation, ARIA attributes for custom controls. Ensure adequate color contrast, provide captions/transcripts for videos, and offer motion reduction preferences via `prefers-reduced-motion` media query.",
-    "cmsIntegration": "Headless CMS (e.g., Sanity.io, Contentful) for flexible content management, allowing content curators to easily update menus, stories, imagery, and even video links without developer intervention, while maintaining the intended visual and narrative integrity."
+    "frontendFramework": "React (with Next.js for SSR/SSG) or Vue (with Nuxt.js) for robust component architecture, state management, and performance-optimized rendering of dynamic content and rich media. Enables efficient development of complex UI and motion systems.",
+    "motionLibrary": "GSAP (GreenSock Animation Platform) or Framer Motion for sophisticated, high-performance animation orchestration, scroll-triggered animations, and complex micro-interactions (steam, neon glow effects). Ensures smooth 60fps animations across devices.",
+    "mediaOptimization": "Utilize modern video codecs (e.g., WebM, H.265) and responsive image formats (WebP) with adaptive loading (lazy loading, CDN delivery) for hero videos and high-res photography. Implement `<video>` tag with `muted autoplay loop playsinline` for hero, with a low-res placeholder image until loaded.",
+    "realTimeDataIntegration": "API endpoints for operational status ('LIVE: SERVING UNTIL 3:00 AM'), customer sentiment highlights (e.g., integration with social media APIs or a curated content management system), and popular hours data. WebSockets or server-sent events for critical, dynamic updates.",
+    "geolocationServices": "Browser's Geolocation API combined with Google Maps API (or similar) for 'Quick-Route Drive-Through' functionality, location-aware CTAs, and rendering the interactive map.",
+    "audioIntegration": "Strategic, non-intrusive audio implementation using Web Audio API for micro-interactions (sizzle) with careful volume control and user-preference settings (on/off toggle). Default muted.",
+    "accessibility": "Semantic HTML, ARIA attributes for dynamic content and interactive elements, keyboard navigation support, and sufficient color contrast ratios to meet WCAG standards, especially for high-contrast dark themes.",
+    "performanceMonitoring": "Implement Lighthouse audits, Web Vitals monitoring, and CDN for static assets to ensure fast load times and smooth interactions crucial for a 'fast turnaround' experience."
   },
   "implementationPriorities": [
     {
-      "phase": "Phase 1: Cinematic Core & Narrative Foundation (MVP - 6-8 weeks)",
-      "priorities": [
-        "**Hero Section Development (S01):** Implement full-screen hero video with bespoke sound, dynamic typography reveal, and initial scroll-triggered journey initiation.",
-        "**Core Scroll Choreography (GSAP/ScrollTrigger):** Establish the multi-layered parallax system and fundamental section transition logic (organic dissolves, cinematic wipes) for S01-S03.",
-        "**Brand Story & Signature Creations Sections (S02, S03):** Implement scroll-triggered content reveals, interactive ingredient spotlights, and initial video vignettes with soundscapes.",
-        "**Performance Baseline:** Implement initial image/video optimization, lazy loading, critical CSS, and CDN integration for a performant core experience across devices.",
-        "**Custom Cursor & Core UI (Glassmorphism):** Develop the custom cursor behavior and foundational 'glassmorphic' UI elements (e.g., minimalist navigation overlay, chapter markers)."
+      "phase": "Phase 1: Foundational Cinematic Experience (MVP)",
+      "items": [
+        "**Core Homepage Hero:** Fully functional autoplay video loop, dynamic 'LIVE' badge with real-time status, and primary CTA for Dine-in/Drive-through/Delivery with basic location logic.",
+        "**'The Core Rotation' Section:** High-contrast cards for Shawarma, Irani Chai, Bun Maska, Peri Peri Shawarma with macro photography and initial descriptions. Implement horizontal scroll and basic hover-triggered steam/sizzle micro-interactions.",
+        "**Utilitarian Footer:** Accurate operating hours, phone, address, and quick-route directions. Ensure data is directly callable/mappable.",
+        "**Base Visual & Motion Systems:** Implement primary color palette, typography, and global motion principles. Optimize initial load performance for rich media."
       ]
     },
     {
-      "phase": "Phase 2: Deep Immersion & Menu Experience (8-10 weeks)",
-      "priorities": [
-        "**Grand Menu & Craft Sections (S04, S05):** Build interactive menu, filtering, detailed item reveals with 'artisanal close-ups'. Integrate behind-the-scenes video montages and artisan profiles.",
-        "**Advanced Immersive Moments:** Implement the 'aroma cloud' visualizer (leveraging Three.js/WebGL if needed), '360-degree virtual tour' with interactive hotspots, and advanced dynamic typography (flavor notes synced with visuals).",
-        "**Comprehensive Motion Design:** Refine all hover states, click feedback, and micro-interactions across the site, ensuring a consistent 'tactile and responsive' feel. Implement 'focus pull' animations.",
-        "**Cross-Browser & Responsive Refinement:** Rigorous testing and optimization across all major browsers and device breakpoints, ensuring cinematic fidelity scales gracefully.",
-        "**CMS Integration (Menu & Stories):** Connect dynamic content for menu items, brand stories, and featured creations to the chosen headless CMS."
+      "phase": "Phase 2: Deepened Immersion & Operational Realism",
+      "items": [
+        "**'Lane No. 5 Energy' Section:** Integration of real-time social media snippets and live data visualization of popular hours. Fully interactive embedded map with routing.",
+        "**Enhanced Motion Choreography:** Refine scroll-triggered animations between all major sections. Implement 'Fast Turnaround Navigation' across the site.",
+        "**'Late-Night Mode' Toggle:** Fully functional interactive switch that applies the site-wide atmospheric lighting change.",
+        "**Refined Sensory Interactions:** Expand steam and sizzle effects with more naturalistic animations. Implement subtle, background street ambiance soundscapes (user-toggleable)."
       ]
     },
     {
-      "phase": "Phase 3: Engagement, Refinement & Launch (4-6 weeks)",
-      "priorities": [
-        "**Gather & Savor, Curtain Call Sections (S06, S07):** Implement community section, integrate booking/ordering systems, and design clear contact forms.",
-        "**Sound Design Finalization:** Integrate all bespoke ambient sounds, UI feedback sounds, and ensure consistent volume control, user preferences, and graceful audio loading.",
-        "**Accessibility Audit & Remediation:** Conduct a full WCAG 2.1 AA compliance audit and implement necessary accessibility features.",
-        "**Final Performance Audit & Optimization:** Comprehensive Lighthouse audit, fine-tuning of all animations, asset delivery, and overall load times to achieve 'Awwwards-level' performance scores.",
-        "**Analytics & SEO Integration:** Implement comprehensive tracking (Google Analytics 4, Hotjar, etc.) and ensure robust SEO configuration for maximum discoverability and impact.",
-        "**User Acceptance Testing (UAT) & Iteration:** Gather feedback from stakeholders and target users, conduct final polish and bug fixing based on insights before launch."
+      "phase": "Phase 3: Continuous Engagement & Expansion",
+      "items": [
+        "**Ordering System Integration:** Deeper integration with third-party delivery platforms and/or a simplified in-house pickup ordering flow.",
+        "**Content Refresh System:** Establish a pipeline for easy updates of new macro photography, real customer content, and specials.",
+        "**Performance & Accessibility Audits:** Ongoing optimization and improvements based on user feedback and technical performance metrics.",
+        "**Seasonal Specials/Events:** Integrate dynamic content slots for limited-time offerings that maintain the cinematic and authentic visual language."
       ]
     }
   ]

@@ -1,12 +1,18 @@
 import { ai } from "../services/gemini.service";
 import { creativeIntelligencePrompt } from "../prompts/creative-intelligence.prompt";
 import { retry } from "../utils/retry";
+import { BusinessTruthDocument } from "../schemas/business.schema";
+import { createIdentityLock } from "../core/truth/identity-lock";
 
 export async function generateCreativeIntelligence(
-  businessData: unknown
-) {
-  const prompt = creativeIntelligencePrompt(
-    JSON.stringify(businessData, null, 2)
+  businessData: BusinessTruthDocument
+){
+  const identityLock =
+    createIdentityLock(businessData);
+  const prompt =
+    creativeIntelligencePrompt(
+    businessData,
+    identityLock
   );
 
   const response = await retry(() =>
@@ -22,6 +28,6 @@ export async function generateCreativeIntelligence(
     .replace(/```json/g, "")
     .replace(/```/g, "")
     .trim();
-
+    console.log(text);
   return JSON.parse(cleanedText);
 }

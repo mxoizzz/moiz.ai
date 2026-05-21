@@ -1,8 +1,10 @@
 import { ai } from "../services/gemini.service";
-import { businessAnalysisPrompt } from "../prompts/business-analysis.prompt";
-import { BusinessSchema } from "../schemas/business.schema";
 
-export async function parseGoogleMapsData(rawData: string) {
+import { businessAnalysisPrompt } from "../prompts/business-analysis.prompt";
+
+import { BusinessTruthDocumentSchema } from "../schemas/business.schema";
+
+export async function extractBusinessTruth(rawData: string) {
   const prompt = businessAnalysisPrompt(rawData);
 
   const response = await ai.models.generateContent({
@@ -19,7 +21,8 @@ export async function parseGoogleMapsData(rawData: string) {
 
   const parsedJson = JSON.parse(cleanedText);
 
-  const validatedData = BusinessSchema.parse(parsedJson);
+  const validatedData =
+    BusinessTruthDocumentSchema.parse(parsedJson);
 
   return validatedData;
 }

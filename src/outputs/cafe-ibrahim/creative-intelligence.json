@@ -1,117 +1,82 @@
 {
-  "masterContext": {
-    "brandPersonality": "A revered artisan, a warm storyteller, a sophisticated curator of authentic culinary experiences, modern yet timeless, adventurous and comforting.",
-    "brandPositioning": "Elevating the authentic heritage of Indian and Middle Eastern flavors into a modern, cinematic, and deeply emotional culinary journey.",
-    "visualStyle": "Evocative realism, rich textures, golden-hour lighting, deep focus compositions, artisanal close-ups, and an elegant, slightly desaturated color palette with vibrant accents.",
-    "colorPsychology": [
-      "Deep Crimson: Passion, heritage, spice, warmth",
-      "Saffron Gold: Luxury, flavor, authenticity, light",
-      "Earthy Umber: Grounding, tradition, comfort, roasted notes",
-      "Smoked Charcoal: Modernity, sophistication, contrast, depth",
-      "Creamy Off-White: Purity, freshness, comfort, balance"
-    ],
-    "typographyDirection": "A harmonious blend of elegant, slightly condensed serifs for impactful headlines and refined, highly legible sans-serifs for body text, conveying both heritage and modern clarity.",
-    "motionStyle": "Fluid, deliberate, and graceful, focusing on revealing details, emphasizing depth, and guiding the eye with a poetic, unhurried rhythm.",
-    "uxPhilosophy": "A sensory-rich journey of discovery, where intuitive interactions seamlessly unveil narratives, evoke emotions, and provide a premium, effortless culinary exploration.",
-    "emotionalExperience": "From initial curiosity and intrigue, through a sense of warmth and comfort, to delight, satisfaction, and a deep appreciation for culinary artistry and heritage.",
-    "storytellingStyle": "Episodic and sensory, using micro-narratives to trace ingredients, preparation techniques, and the cultural significance of each dish, presented with cinematic flair.",
-    "ctaStrategy": "Subtle, inviting, and contextually integrated prompts that guide users deeper into the experience, offering access to services without breaking immersion ('Discover Our Craft', 'Taste the Legacy', 'Reserve Your Journey').",
-    "designKeywords": [
-      "Sensory",
-      "Evocative",
-      "Artisanal",
-      "Heritage",
-      "Modernist",
-      "Gourmet",
-      "Fluid",
-      "Intimate",
-      "Authentic",
-      "Timeless"
-    ]
+  "brandIdentityProjection": {
+    "coreVibe": "Late-Night Urban Sanctuary",
+    "tagline": "Sizzle. Steam. Late-Night Pune.",
+    "tonality": "Raw, energetic, honest, and warm. No pretension, just late-night heat and real street-side comfort.",
+    "communityPositioning": "The neighborhood baseline for post-midnight cravings, quick morning chai runs, and legendary street-side shawarma."
   },
-  "designSystem": {
-    "primaryColors": [
-      "#9A2A2A",
-      "#B8860B",
-      "#6B4226"
-    ],
-    "secondaryColors": [
-      "#2C3E50",
-      "#F5F5DC",
-      "#778899"
-    ],
-    "gradients": [
-      "linear-gradient(135deg, #B8860B 0%, #EAA221 100%)",
-      "linear-gradient(180deg, #9A2A2A 0%, #6B1A1A 100%)",
-      "radial-gradient(circle, #F5F5DC 0%, #D2B48C 100%)"
-    ],
-    "fontPairings": [
+  "visualSystem": {
+    "colorPalette": {
+      "primaryBackground": "#0F0F10",
+      "primaryBackgroundDescription": "Deep charcoal, mimicking the Pune night sky over Lane 5.",
+      "accentAmber": "#FF9F0A",
+      "accentAmberDescription": "Warm incandescent overhead lighting and fresh glowing embers.",
+      "teaBrown": "#7C5233",
+      "teaBrownDescription": "Rich, earthy, and aromatic tone of boiling Irani Chai.",
+      "streetNeonOrange": "#FF5E00",
+      "streetNeonOrangeDescription": "High-intensity neon warmth reminiscent of the late-night storefront glow."
+    },
+    "typography": {
+      "displayFont": "SANS-SERIF-BOLD-CONDENSED",
+      "displayFontUsage": "Impactful, high-volume headers, mimicking fast-paced, high-turnaround urban energy.",
+      "bodyFont": "MONOSPACE-STREET-CLEAN",
+      "bodyFontUsage": "Industrial, utilitarian layouts, mimicking quick receipts, clean execution, and no-nonsense menu structures."
+    },
+    "lightingAndAtmosphere": {
+      "environment": "High-contrast night-time depth, where dark backdrops make the steam from boiling chai and glowing shawarma spit-fires visually pop.",
+      "photographyDirection": "Macro shots of rich, dripping garlic sauce, seasoned chicken spinning on the rotisserie, crisp toasted bun maska crusts, and natural steam curling off freshly poured clay cups of chai. Emphasize raw, real kitchen movement over staged plates.",
+      "cinematicTransitions": "Slick, split-second cuts from high-energy street motion to slow-motion macro-frames of food preparation."
+    }
+  },
+  "uxLayoutArchitecture": {
+    "homepageHero": {
+      "visualMedia": "Autoplay, muted cinematic video loop of a carving knife slicing juicy chicken from the spinning shawarma spit, transitioning immediately into a high-angle pour of steaming Irani chai.",
+      "dynamicHeroBadge": {
+        "text": "LIVE: SERVING UNTIL 3:00 AM",
+        "style": "Pulsing neon-orange indicator signifying active late-night operations."
+      },
+      "primaryCallToAction": {
+        "text": "Dine-in / Drive-through / Delivery",
+        "action": "Trigger real-time location mapping and ordering channels."
+      }
+    },
+    "interactiveSections": [
       {
-        "heading": "Playfair Display",
-        "body": "Outfit"
+        "id": "street_side_fuel",
+        "title": "The Core Rotation",
+        "subtitle": "No massive menu books. Just high-velocity, high-satisfaction street-side staples done right.",
+        "uiMechanism": "Horizontally scrollable high-contrast cards focusing strictly on the big four: Shawarma, Irani Chai, Bun Maska, and Peri Peri Shawarma."
       },
       {
-        "heading": "Cormorant Garamond",
-        "body": "Inter"
+        "id": "operational_pulse",
+        "title": "Lane No. 5 Energy",
+        "subtitle": "Real scenes from the corner shop.",
+        "uiMechanism": "Grid layout showing real-time customer sentiment highlights, popular late-night hours, and a direct visual map pointing to the Airport Road / Sanjay Park intersection."
       }
     ],
-    "spacingStyle": "Generous and breathable, employing a 'soft grid' to allow elements ample room to breathe, emphasizing elegance and focus.",
-    "borderRadius": "Subtle and organic, primarily 8-12px for softer edges on cards and buttons, with occasional larger, flowing curves for sectional elements.",
-    "shadowStyle": "Soft, diffused multi-layered shadows creating subtle depth and separation, akin to ambient lighting, complemented by occasional inner glows for focal elements.",
-    "uiStyle": "Minimalist, high-fidelity, and context-aware. UI elements appear only when needed, integrating seamlessly into the visual narrative with subtle transparency and refined micro-interactions.",
-    "glassmorphismLevel": "Subtle translucency (10-20% opacity) with a light blur, used sparingly for modal overlays, contextual menus, and floating navigation, adding a modern, ethereal depth.",
-    "animationIntensity": "Smooth, purposeful, and medium-low intensity. Animations are designed to enhance narrative flow and provide elegant feedback, never to distract.",
-    "sectionMood": [
-      "Hero: Grand, inviting, enigmatic",
-      "About: Warm, authentic, heritage-rich",
-      "Menu: Appetizing, detailed, discovery-focused",
-      "Craft: Skillful, intimate, respectful",
-      "Experience: Community-driven, joyful, modern",
-      "Contact: Clear, accessible, concluding"
-    ],
-    "componentStyle": "Elegantly crafted, bespoke components with refined details, often integrating subtle textures or atmospheric overlays to feel part of the overall cinematic scene."
+    "footer": {
+      "layout": "Utilitarian dashboard format displaying direct-access verified facts: Operating hours (Closes 3 AM), Phone (085510 61614), Address, and quick-route directions for drive-through customers."
+    }
   },
-  "experienceStrategy": {
-    "heroConcept": "A slow-motion, shallow-depth-of-field cinematic shot: steam delicately rising from a freshly poured Irani Chai, or the intricate layering of a Peri Peri Shawarma, accompanied by bespoke ambient sound and a single, elegant typography reveal.",
-    "scrollNarrative": "A continuous, chapter-based visual and sensory journey. Each scroll unfolds a new culinary story, transitioning through rich textures, preparation vignettes, and the ambiance of CAFE IBRAHIM, revealing the brand's soul progressively.",
-    "motionPhilosophy": "Purposeful elegance. Every movement is deliberate, enhancing the sensory and emotional connection, guiding the user's focus, and revealing content with a graceful, cinematic unfolding.",
-    "transitionStyle": "Seamless, organic dissolves and sophisticated cinematic wipes that mimic camera movements (pans, tilts, focus pulls), creating a fluid, uninterrupted narrative flow between sections.",
-    "interactionStyle": "Tactile and responsive, offering subtle visual and auditory feedback. Hover states evoke texture or warmth; clicks feel deliberate and satisfying, encouraging exploratory engagement.",
-    "emotionalPacing": [
-      "Anticipation (Hero)",
-      "Warmth & Intrigue (Heritage)",
-      "Delight & Desire (Menu)",
-      "Appreciation & Craft (Process)",
-      "Contentment & Belonging (Community)",
-      "Satisfaction & Action (Contact/Order)"
-    ],
-    "immersiveMoments": [
-      "Full-screen, slow-motion video vignettes of key dish preparation (e.g., biryani layering, shawarma carving).",
-      "Interactive ingredient spotlight with rich imagery and a subtle soundscape.",
-      "An 'aroma cloud' animation/visualizer that subtly shifts colors based on a showcased spice profile.",
-      "A 360-degree virtual tour segment with ambient cafe sounds and interactive hotspots.",
-      "Dynamic typography revealing flavor notes synced with visual cues."
-    ],
-    "sectionFlow": [
-      "Overture (Hero Cinematic)",
-      "The Legacy Unfolds (Brand Story & Heritage)",
-      "Signature Creations (Featured Dishes with Mini-Narratives)",
-      "The Grand Menu (Interactive, Detailed Offerings)",
-      "Art of the Craft (Behind-the-Scenes & Ingredients)",
-      "Gather & Savor (Cafe Experience & Community)",
-      "Curtain Call (Visit, Reserve, Order)"
-    ],
-    "parallaxDepthStrategy": "Multi-layered, subtle shifts in parallax, creating a naturalistic sense of depth and dimension, where background elements move slower than foregrounds, mimicking a cinematic tracking shot.",
-    "cinematicElements": [
-      "Wide aspect ratio hero and full-screen segments.",
-      "Selective depth of field on imagery and video.",
-      "Artful, chiaroscuro lighting techniques.",
-      "Bespoke, dynamic sound design and ambient soundscapes.",
-      "Slow-motion and time-lapse video integration.",
-      "Narrative-driven visual sequencing and editing.",
-      "Focus pull and rack focus animations on content reveals."
-    ],
-    "cursorBehavior": "A refined, subtle cursor that transforms contextually (e.g., a warm, glowing 'aura' on hover, a delicate pointer on links) and leaves a faint, ephemeral trail on movement, hinting at interaction.",
-    "visualRhythm": "A deliberate, flowing cadence, alternating between grand, expansive vistas and intimate, detailed close-ups, guided by the narrative's emotional tempo and content density."
+  "contentStrategy": {
+    "brandVoiceProjections": [
+      {
+        "context": "Menu description for Shawarma",
+        "text": "Juicy chicken roasted slow, seasoned sharp, and wrapped tight. No-nonsense street food built for hunger at any hour."
+      },
+      {
+        "context": "Irani Chai & Bun Maska showcase",
+        "text": "Sweet, strong, and steaming hot. Paired with thick-cut buttered buns. The definitive Pune breakfast, or your 2:00 AM reset button."
+      },
+      {
+        "context": "Late-night operating hours claim",
+        "text": "When the rest of Pune sleeps, Sanjay Park is still cooking. Serving fresh, hot food up until 3:00 AM."
+      }
+    ]
+  },
+  "microInteractions": {
+    "steamEffect": "A subtle, CSS-driven ambient steam mist effect rising behind the Chai menu panel when hovered.",
+    "neonGlowToggle": "Interactive 'Late-Night Mode' switch that dims the site's ambient light to mimic the exact atmosphere of standing outside Lane No. 5 under the warm yellow-orange neon glow.",
+    "fastTurnaroundNavigation": "Tactile, instant-load menu navigation that mimics the rapid service and high-volume operations of the physical cafe."
   }
 }

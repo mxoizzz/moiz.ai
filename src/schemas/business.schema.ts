@@ -1,21 +1,83 @@
 import { z } from "zod";
 
-export const BusinessSchema = z.object({
-  businessName: z.string(),
-  category: z.string(),
-  rating: z.number(),
-  reviewCount: z.number(),
-  priceRange: z.string(),
+export const VerifiedDataSchema = z.object({
+  businessName: z.string().optional(),
+  category: z.string().optional(),
 
-  services: z.array(z.string()),
+  address: z.string().optional(),
+  phone: z.string().optional(),
+  website: z.string().optional(),
 
-  topKeywords: z.array(z.string()),
+  rating: z.number().optional(),
+  reviewCount: z.number().optional(),
 
-  audience: z.array(z.string()),
+  priceRange: z.string().optional(),
 
-  emotionalTone: z.string(),
+  operatingHours: z.array(z.string()).optional(),
 
-  strengths: z.array(z.string())
+  services: z.array(z.string()).optional(),
+
+  topKeywords: z.array(z.string()).optional(),
+
+  googleVerifiedFacts: z.array(z.string()).optional()
 });
 
-export type Business = z.infer<typeof BusinessSchema>;
+export const InferenceConfidenceSchema = z.object({
+  field: z.string(),
+  confidence: z.number(),
+  evidence: z.array(z.string())
+});
+
+export const InferredDataSchema = z.object({
+  audience: z.array(z.string()).optional(),
+
+  emotionalTone: z.array(z.string()).optional(),
+
+  atmosphere: z.array(z.string()).optional(),
+
+  strengths: z.array(z.string()).optional(),
+
+  visualStyle: z.array(z.string()).optional(),
+
+  brandSignals: z.array(z.string()).optional(),
+
+  inferenceConfidence: z
+    .array(InferenceConfidenceSchema)
+    .optional()
+});
+
+export const UnknownDataSchema = z.object({
+  missingInformation: z.array(z.string()).optional(),
+
+  blockedAssumptions: z.array(z.string()).optional()
+});
+
+export const CreativeDirectionSeedSchema = z.object({
+  cinematicTone: z.array(z.string()).optional(),
+
+  spatialMood: z.array(z.string()).optional(),
+
+  motionStyle: z.array(z.string()).optional(),
+
+  uiAtmosphere: z.array(z.string()).optional(),
+
+  photographyDirection: z.array(z.string()).optional(),
+
+  lightingDirection: z.array(z.string()).optional(),
+
+  confidenceNotes: z.array(z.string()).optional()
+});
+
+export const BusinessTruthDocumentSchema = z.object({
+  verifiedData: VerifiedDataSchema,
+
+  inferredData: InferredDataSchema,
+
+  unknownData: UnknownDataSchema,
+
+  creativeDirectionSeed: CreativeDirectionSeedSchema
+});
+
+export type BusinessTruthDocument = z.infer<
+  typeof BusinessTruthDocumentSchema
+>;
