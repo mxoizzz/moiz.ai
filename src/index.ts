@@ -4,6 +4,7 @@ import { generateCreativeIntelligence } from "./generators/creative-intelligence
 import { fileExists } from "./utils/file-exists";
 import { loadJson } from "./utils/load-json";
 import { generatePRD } from "./generators/prd.generator";
+import { generatePromptPack } from "./generators/prompt-orchestration.generator";
 
 const rawBusinessData = `
 CAFE IBRAHIM
@@ -286,14 +287,11 @@ async function main() {
   try {
     // PATHS
 
-    const businessPath =
-      "src/outputs/cafe-ibrahim/business-data.json";
+    const businessPath = "src/outputs/cafe-ibrahim/business-data.json";
 
-    const creativePath =
-      "src/outputs/cafe-ibrahim/creative-intelligence.json";
+    const creativePath = "src/outputs/cafe-ibrahim/creative-intelligence.json";
 
-    const prdPath =
-      "src/outputs/cafe-ibrahim/prd.json";
+    const prdPath = "src/outputs/cafe-ibrahim/prd.json";
 
     // =========================================
     // BUSINESS INTELLIGENCE
@@ -302,26 +300,15 @@ async function main() {
     let businessData;
 
     if (fileExists(businessPath)) {
-      console.log(
-        "✅ Using cached business intelligence..."
-      );
+      console.log("✅ Using cached business intelligence...");
 
       businessData = loadJson(businessPath);
     } else {
-      console.log(
-        "🚀 Generating business intelligence..."
-      );
+      console.log("🚀 Generating business intelligence...");
 
-      businessData =
-        await parseGoogleMapsData(
-          rawBusinessData
-        );
+      businessData = await parseGoogleMapsData(rawBusinessData);
 
-      saveJsonFile(
-        "cafe-ibrahim",
-        "business-data.json",
-        businessData
-      );
+      saveJsonFile("cafe-ibrahim", "business-data.json", businessData);
     }
 
     console.dir(businessData, {
@@ -335,26 +322,18 @@ async function main() {
     let creativeIntelligence;
 
     if (fileExists(creativePath)) {
-      console.log(
-        "✅ Using cached creative intelligence..."
-      );
+      console.log("✅ Using cached creative intelligence...");
 
-      creativeIntelligence =
-        loadJson(creativePath);
+      creativeIntelligence = loadJson(creativePath);
     } else {
-      console.log(
-        "🎨 Generating creative intelligence..."
-      );
+      console.log("🎨 Generating creative intelligence...");
 
-      creativeIntelligence =
-        await generateCreativeIntelligence(
-          businessData
-        );
+      creativeIntelligence = await generateCreativeIntelligence(businessData);
 
       saveJsonFile(
         "cafe-ibrahim",
         "creative-intelligence.json",
-        creativeIntelligence
+        creativeIntelligence,
       );
     }
 
@@ -369,38 +348,40 @@ async function main() {
     let prd;
 
     if (fileExists(prdPath)) {
-      console.log(
-        "✅ Using cached PRD..."
-      );
+      console.log("✅ Using cached PRD...");
 
       prd = loadJson(prdPath);
     } else {
-      console.log(
-        "📘 Generating PRD..."
-      );
+      console.log("📘 Generating PRD...");
 
-      prd = await generatePRD(
-        creativeIntelligence
-      );
+      prd = await generatePRD(creativeIntelligence);
 
-      saveJsonFile(
-        "cafe-ibrahim",
-        "prd.json",
-        prd
-      );
+      saveJsonFile("cafe-ibrahim", "prd.json", prd);
     }
 
     console.dir(prd, {
       depth: null,
     });
 
-    // =========================================
-    // PIPELINE COMPLETE
-    // =========================================
+    const promptPackPath = "src/outputs/cafe-ibrahim/prompt-pack.json";
 
-    console.log(
-      "✅ Pipeline completed successfully."
-    );
+    let promptPack;
+
+    if (fileExists(promptPackPath)) {
+      console.log("✅ Using cached prompt pack...");
+
+      promptPack = loadJson(promptPackPath);
+    } else {
+      console.log("🪄 Generating prompt pack...");
+
+      promptPack = await generatePromptPack(creativeIntelligence, prd);
+
+      saveJsonFile("cafe-ibrahim", "prompt-pack.json", promptPack);
+    }
+
+    console.dir(promptPack, {
+      depth: null,
+    });
   } catch (error) {
     console.error("Error:", error);
   }
